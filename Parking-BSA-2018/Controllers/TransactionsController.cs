@@ -10,8 +10,9 @@ namespace ParkingBSA2018.Controllers
     public class TransactionsController : Controller
     {
 
-        [HttpGet(Name = "TransactionsLog"), Route("TransactionsLog")]
-        public IActionResult GetaTransactionsLog()
+        [HttpGet("/TransactionsLog", Name = "TransactionsLog")]
+        [ActionName("TransactionsLog")]
+        public IActionResult GetTransactionsLog()
         {
             string trLog;
             try
@@ -27,8 +28,9 @@ namespace ParkingBSA2018.Controllers
         }
 
 
-        [HttpGet(Name = "LastMinuteTransactions"), Route("LastMinuteTransactions")]
-        public IActionResult GetaLastMinuteTransactions()
+        [HttpGet("/LastMinuteTransactions", Name = "LastMinuteTransactions")]
+        [ActionName("LastMinuteTransactions")]
+        public IActionResult GetLastMinuteTransactions()
         {
            
             var lastMinuteTransactions= ParkingClassLibrary.Parking.Instance.LastMinuteTransactions;
@@ -40,8 +42,9 @@ namespace ParkingBSA2018.Controllers
             return Ok(lastMinuteTransactions);
         }
 
-        [HttpGet("{id}",Name = "LastMinuteTransactions"), Route("LastMinuteTransactions")]
-        public IActionResult GetaLastMinuteTransactions(Guid carId)
+        [HttpGet("/LastMinuteTransactionsByCarId", Name = "LastMinuteTransactionsByCarId")]
+        [ActionName("LastMinuteTransactionsByCarId")]
+        public IActionResult GetLastMinuteTransactionsByCarId(Guid carId)
         {
 
             var lastMinuteTransactionsByCarId = ParkingClassLibrary.Parking.Instance.LastMinuteTransactions.
@@ -53,8 +56,8 @@ namespace ParkingBSA2018.Controllers
 
             return Ok(lastMinuteTransactionsByCarId);
         }
-
-        [HttpPut(Name = "AddMoneyToCar"), Route("AddMoneyToCar")]
+        
+        [HttpPut("AddMoneyToCar",Name = "AddMoneyToCar")]
         public IActionResult AddMoneyToCar(AddMoneyToCarModel model )
         {
 
@@ -69,7 +72,7 @@ namespace ParkingBSA2018.Controllers
 
             return Ok();
         }
-
+        
 
     }
 }
