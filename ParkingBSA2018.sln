@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingBSA2018", "Parking-BSA-2018\ParkingBSA2018.csproj", "{AC886A04-1AA5-43DF-846E-2D2606D22A3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingClassLibrary", "ParkingClassLibrary\ParkingClassLibrary.csproj", "{50FEBC4B-3F81-4ECD-893E-2F9FA5E9494C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC886A04-1AA5-43DF-846E-2D2606D22A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC886A04-1AA5-43DF-846E-2D2606D22A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC886A04-1AA5-43DF-846E-2D2606D22A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC886A04-1AA5-43DF-846E-2D2606D22A3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FEBC4B-3F81-4ECD-893E-2F9FA5E9494C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FEBC4B-3F81-4ECD-893E-2F9FA5E9494C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FEBC4B-3F81-4ECD-893E-2F9FA5E9494C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FEBC4B-3F81-4ECD-893E-2F9FA5E9494C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80216772-FA30-4F60-9228-F0F906A40E71}
+	EndGlobalSection
+EndGlobal
