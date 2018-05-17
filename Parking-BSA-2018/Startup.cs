@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
+using System.Linq;
 
 namespace Parking_BSA_2018
 {
@@ -44,7 +45,27 @@ namespace Parking_BSA_2018
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                   name: "ActionApi",
+                   template: "api/{controller}/{action}/{id}"
+            );
+            });
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
+
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                   name: "Action2Api",
+                   template: "api/{action}/{id}");
+            });
+           
         }
     }
 }
